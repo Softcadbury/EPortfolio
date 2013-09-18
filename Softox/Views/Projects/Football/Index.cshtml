@@ -1,0 +1,181 @@
+﻿@model Softox.Models.Football
+
+<style>
+    .table_team {
+        width: 300px;
+    }
+
+    .table_player {
+        width: 300px;
+    }
+
+
+    
+/* Loading */
+#loading{
+	display: hide;
+	opacity: 0.8;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	background-color: black;
+}
+
+#loading img{
+	display: block;
+	margin: auto;
+	margin-top: 200px;
+}
+
+/* Resultats, Classement & Buteurs  */
+.span3{
+	width: 245px !Important;
+}
+
+.logo-ligue{
+	border: 2px solid #DDD;
+	display: block;
+	margin: auto;
+	margin-bottom: 10px;
+	height: 40px;
+}
+
+.table{
+	border: 2px solid #DDD;
+	border-radius: 24px;
+	margin-bottom: 0 !Important;
+}
+
+tr:nth-child(even){
+	background-color: white;
+}
+
+.header{
+	color: #84AD09;
+	margin-top: 50px;
+}
+
+td{
+	padding:2.5px !Important;
+}
+
+/* Resultats */
+#resultats .span2{
+	width: 60px !Important;
+	margin-top: 20px;
+}
+
+#resultats .span4{
+	width: 355px !Important;
+	margin: 20px 0;
+}
+
+#resultats .logo-ligue{
+	height: auto !Important;
+	width: 40px !Important;
+}
+
+#resultats .align-right{
+	text-align: right !Important;
+}
+
+#resultats .score{
+	width: 17px;
+}
+</style>
+
+<script>$(document).ready(function () {
+
+    var res_already_loaded = false,
+		cla_already_loaded = false,
+		but_already_loaded = false;
+
+    if (document.location.hash == "#classement") { show_classement(); }
+    else if (document.location.hash == "#buteurs") { show_buteurs(); }
+    else { show_resultats(); }
+
+    $('#resultats_btn').click(show_resultats);
+    $('#classement_btn').click(show_classement);
+    $('#buteurs_btn').click(show_buteurs);
+
+    function show_resultats() {
+        show_helper("resultats", res_already_loaded);
+        res_already_loaded = true;
+    }
+
+    function show_classement() {
+        show_helper("classement", cla_already_loaded);
+        cla_already_loaded = true;
+    }
+
+    function show_buteurs() {
+        show_helper("buteurs", but_already_loaded);
+        but_already_loaded = true;
+    }
+
+    function show_helper(id, already_loaded) {
+        hide_all();
+        document.location.hash = '#' + id;
+
+        if (!already_loaded) {
+            enable_loading();
+            $('#' + id).load(id + '.php', function () {
+                disable_loading();
+            });
+        }
+
+        $('#' + id).show();
+        $('#' + id + '_btn').addClass('active');
+    }
+
+    function hide_all() {
+        $('.btn').removeClass('active');
+        $('#resultats').hide();
+        $('#classement').hide();
+        $('#buteurs').hide();
+    }
+
+    function enable_loading() {
+        $('#loading').show();
+    }
+
+    function disable_loading() {
+        $('#loading').hide();
+    }
+
+});</script>
+
+<div id="loading">
+    <img src="~/Content/Images/Football/loading.gif">
+</div>
+<div class="btn-group">
+    <button class="btn" id="resultats_btn">Résultats</button>
+    <button class="btn" id="classement_btn">Classement</button>
+    <button class="btn" id="buteurs_btn">Buteurs</button>
+</div>
+<div class="content">
+    <div id="resultats">
+        @Html.Partial("Football/ResultsTemplate", Model.resultsFrance)
+        @Html.Partial("Football/ResultsTemplate", Model.resultsEngland)
+        @Html.Partial("Football/ResultsTemplate", Model.resultsSpain)
+        @Html.Partial("Football/ResultsTemplate", Model.resultsItalia)
+        @Html.Partial("Football/ResultsTemplate", Model.resultsGermany)
+    </div>
+    <div id="classement">
+        @Html.Partial("Football/TeamRankingTemplate", Model.teamRankingFrance)
+        @Html.Partial("Football/TeamRankingTemplate", Model.teamRankingEngland)
+        @Html.Partial("Football/TeamRankingTemplate", Model.teamRankingGermany)
+        @Html.Partial("Football/TeamRankingTemplate", Model.teamRankingItalia)
+        @Html.Partial("Football/TeamRankingTemplate", Model.teamRankingGermany)
+    </div>
+    <div id="buteurs">
+        @Html.Partial("Football/PlayerRankingTemplate", Model.playerRankingFrance)
+        @Html.Partial("Football/PlayerRankingTemplate", Model.playerRankingEngland)
+        @Html.Partial("Football/PlayerRankingTemplate", Model.playerRankingGermany)
+        @Html.Partial("Football/PlayerRankingTemplate", Model.playerRankingItalia)
+        @Html.Partial("Football/PlayerRankingTemplate", Model.playerRankingGermany)
+    </div>
+</div>

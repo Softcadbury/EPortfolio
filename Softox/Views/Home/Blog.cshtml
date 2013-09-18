@@ -1,0 +1,19 @@
+﻿<div id="blog_container" class="container_sub">
+    <h1>Blog</h1>
+    <div class="row">
+        <div class="col-lg-3">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#tabpost1" data-toggle="tab">C# 1 - Parameters</a></li>
+                <li><a href="#tabpost2" data-toggle="tab">C# 2 - Delegates</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-9 tab-content ">
+            <div class="tab-pane active" id="tabpost1">
+                @Html.Partial("../Blog/Post1")
+            </div>
+            <div class="tab-pane" id="tabpost2">
+                @Html.Partial("../Blog/Post2")
+            </div>
+        </div>
+    </div>
+</div>

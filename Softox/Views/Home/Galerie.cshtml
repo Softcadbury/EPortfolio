@@ -1,0 +1,169 @@
+﻿@using Softox.Helpers
+@{
+    string middlesbrough = "middlesbrough";
+    string saltburn = "saltburn";
+    string whitby = "whitby";
+    string robin_hood = "robin_hood";
+    string london = "london";
+    string holt_hotel = "holt_hotel";
+    string oxford = "oxford";
+    string new_york = "new_york";
+    string singapor = "singapor";
+}
+
+<div id="galerie_container" class="container_sub">
+    <h1>Galerie</h1>
+    <div class="tabbable">
+        <ul class="nav nav-tabs">
+            <li>
+                <a href="#tab2009" data-toggle="tab">2009</a>
+            </li>
+            <li>
+                <a href="#tab2010" data-toggle="tab">2010</a>
+            </li>
+            <li>
+                <a href="#tab2011" data-toggle="tab">2011/12</a>
+            </li>
+            <li class="active">
+                <a href="#tab2013" data-toggle="tab">2013</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content">
+
+        <!-- 2009 -->
+        <div class="tab-pane" id="tab2009">
+            <h3>Middlesbrough (Angleterre)</h3>
+            <h6>Avril - Juin 2009</h6>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(middlesbrough, 1, "Le plein d'argent avant de partir!"))
+                @Html.Raw(ButtonHelper.ImageButton(middlesbrough, 2))
+                @Html.Raw(ButtonHelper.ImageButton(middlesbrough, 3))
+                @Html.Raw(ButtonHelper.ImageButton(middlesbrough, 4, "L'Université de Teesside"))
+            </div>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(middlesbrough, 5))
+                @Html.Raw(ButtonHelper.ImageButton(middlesbrough, 6))
+                @Html.Raw(ButtonHelper.ImageButton(middlesbrough, 7, "Mon poste de travail"))
+                @Html.Raw(ButtonHelper.ImageButton(middlesbrough, 8))
+            </div>
+            <br />
+
+            <h3>Saltburn (Angleterre)</h3>
+            <h6>Avril 2009</h6>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(saltburn, 1))
+                @Html.Raw(ButtonHelper.ImageButton(saltburn, 2))
+                @Html.Raw(ButtonHelper.ImageButton(saltburn, 3))
+                @Html.Raw(ButtonHelper.ImageButton(saltburn, 4))
+            </div>
+            <br />
+
+            <h3>Whitby (Angleterre)</h3>
+            <h6>Avril 2009</h6>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(whitby, 1))
+                @Html.Raw(ButtonHelper.ImageButton(whitby, 2))
+                @Html.Raw(ButtonHelper.ImageButton(whitby, 3))
+                @Html.Raw(ButtonHelper.ImageButton(whitby, 4))
+            </div>
+            <br />
+
+            <h3>Robin Hood (Angleterre)</h3>
+            <h6>Avril 2009</h6>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(robin_hood, 1))
+                @Html.Raw(ButtonHelper.ImageButton(robin_hood, 2))
+            </div>
+        </div>
+
+        <!-- 2010 -->
+        <div class="tab-pane" id="tab2010">
+            <h3>Londres (Angleterre)</h3>
+            <h6>Juin 2010</h6>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(london, 3, "Le stade de mon équipe, L'Emirates Stadium!"))
+                @Html.Raw(ButtonHelper.ImageButton(london, 2))
+                @Html.Raw(ButtonHelper.ImageButton(london, 1))
+            </div>
+            <br />
+
+            <h3>Hotl Hotel et ses alentours (Angleterre)</h3>
+            <h6>Juin - Septembre 2010</h6>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(holt_hotel, 1, "L'hotel"))
+                @Html.Raw(ButtonHelper.ImageButton(holt_hotel, 4))
+                @Html.Raw(ButtonHelper.ImageButton(holt_hotel, 2))
+                @Html.Raw(ButtonHelper.ImageButton(holt_hotel, 3))
+            </div>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(holt_hotel, 5, "Rousham House"))
+                @Html.Raw(ButtonHelper.ImageButton(holt_hotel, 6))
+                @Html.Raw(ButtonHelper.ImageButton(holt_hotel, 7))
+            </div>
+            <br />
+
+            <h3>Oxford (Angleterre)</h3>
+            <h6>Juin - Septembre 2010</h6>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(oxford, 3))
+                @Html.Raw(ButtonHelper.ImageButton(oxford, 4))
+                @Html.Raw(ButtonHelper.ImageButton(oxford, 1))
+                @Html.Raw(ButtonHelper.ImageButton(oxford, 2))
+            </div>
+        </div>
+
+        <!-- 2011 / 2012 -->
+        <div class="tab-pane" id="tab2011">
+            <h3>New York (États-Unis)</h3>
+            <h6>Septembre 2011 - Janvier 2012</h6>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(new_york, 1))
+                @Html.Raw(ButtonHelper.ImageButton(new_york, 9))
+                @Html.Raw(ButtonHelper.ImageButton(new_york, 10))
+                @Html.Raw(ButtonHelper.ImageButton(new_york, 4))
+            </div>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(new_york, 2))
+                @Html.Raw(ButtonHelper.ImageButton(new_york, 3))
+                @Html.Raw(ButtonHelper.ImageButton(new_york, 5))
+                @Html.Raw(ButtonHelper.ImageButton(new_york, 6))
+            </div>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(new_york, 7))
+                @Html.Raw(ButtonHelper.ImageButton(new_york, 8))
+                @Html.Raw(ButtonHelper.ImageButton(new_york, 11))
+                @Html.Raw(ButtonHelper.ImageButton(new_york, 12))
+            </div>
+        </div>
+
+        <!-- 2013 -->
+        <div class="tab-pane active" id="tab2013">
+            <h3>Singapour (Singapour)</h3>
+            <h6>Janvier 2013</h6>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 1))
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 8))
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 2))
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 13))
+            </div>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 14))
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 3))
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 4))
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 5))
+            </div>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 6))
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 7))
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 10))
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 11))
+            </div>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 9))
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 15))
+                @Html.Raw(ButtonHelper.ImageButton(singapor, 12))
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿<h2>C# 2 - Delegates</h2>
+
+<h3>Initialization</h3>
+<pre>
+delegate int MyDelegate (int param);
+delegate void MyGenericDelegate&lt;T&gt; (T param);
+</pre>
+
+<h3>Builtins</h3>
+<p>The framework provide some useful builtins</p>
+<pre>
+delegate void Action&lt;T&gt; (T param);
+delegate TResult Func&lt;T1, T2, out TResult&gt; (T1 param1, T2 param2); // You can use between 0 and 8 parameters
+delegate EventHandler (Object sender, EventArgs e);
+delegate EventHandler&lt;T&gt; (Object sender, T e);
+</pre>
+
+<h3>How to use it</h3>
+<pre>
+public void OptionalParameters(int param1 = 1, int param2 = 2)
+{
+    Console.WriteLine(param1 + " - " + param2);
+}
+
+public void Main()
+{
+    
+}
+</pre>
+
+<h3>Events</h3>
+<pre>
+</pre>
+
+<h3>Anonymous methods</h3>
+<pre>
+</pre>
+
+<h3>Lambda expressions</h3>
+<pre>
+</pre>

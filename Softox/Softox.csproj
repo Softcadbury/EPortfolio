@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD21DCCC-24AC-4B59-AB34-D21C0BC8D42D}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Softox</RootNamespace>
+    <AssemblyName>Softox</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProjectsController.cs" />
+    <Compile Include="Controllers\ToolsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ButtonHelper.cs" />
+    <Compile Include="Models\FootballModel.cs" />
+    <Compile Include="Models\MailModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Images\cream_dust.png" />
+    <Content Include="Content\Images\favicon.ico" />
+    <Content Include="Content\Images\fb-icon.png" />
+    <Content Include="Content\Images\football\eng.jpg" />
+    <Content Include="Content\Images\football\esp.jpg" />
+    <Content Include="Content\Images\football\fr.jpg" />
+    <Content Include="Content\Images\football\ger.jpg" />
+    <Content Include="Content\Images\football\it.jpg" />
+    <Content Include="Content\Images\football\loading.gif" />
+    <Content Include="Content\Images\g-icon.png" />
+    <Content Include="Content\Images\galerie\holt_hotel\1.jpg" />
+    <Content Include="Content\Images\galerie\holt_hotel\1x.jpg" />
+    <Content Include="Content\Images\galerie\holt_hotel\2.jpg" />
+    <Content Include="Content\Images\galerie\holt_hotel\2x.jpg" />
+    <Content Include="Content\Images\galerie\holt_hotel\3.jpg" />
+    <Content Include="Content\Images\galerie\holt_hotel\3x.jpg" />
+    <Content Include="Content\Images\galerie\holt_hotel\4.jpg" />
+    <Content Include="Content\Images\galerie\holt_hotel\4x.jpg" />
+    <Content Include="Content\Images\galerie\holt_hotel\5.jpg" />
+    <Content Include="Content\Images\galerie\holt_hotel\5x.jpg" />
+    <Content Include="Content\Images\galerie\holt_hotel\6.jpg" />
+    <Content Include="Content\Images\galerie\holt_hotel\6x.jpg" />
+    <Content Include="Content\Images\galerie\holt_hotel\7.jpg" />
+    <Content Include="Content\Images\galerie\holt_hotel\7x.jpg" />
+    <Content Include="Content\Images\galerie\london\1.jpg" />
+    <Content Include="Content\Images\galerie\london\1x.jpg" />
+    <Content Include="Content\Images\galerie\london\2.jpg" />
+    <Content Include="Content\Images\galerie\london\2x.jpg" />
+    <Content Include="Content\Images\galerie\london\3.jpg" />
+    <Content Include="Content\Images\galerie\london\3x.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\1.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\1x.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\2.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\2x.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\3.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\3x.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\4.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\4x.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\5.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\5x.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\6.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\6x.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\7.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\7x.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\8.jpg" />
+    <Content Include="Content\Images\galerie\middlesbrough\8x.jpg" />
+    <Content Include="Content\Images\galerie\new_york\1.jpg" />
+    <Content Include="Content\Images\galerie\new_york\10.jpg" />
+    <Content Include="Content\Images\galerie\new_york\10x.jpg" />
+    <Content Include="Content\Images\galerie\new_york\11.jpg" />
+    <Content Include="Content\Images\galerie\new_york\11x.jpg" />
+    <Content Include="Content\Images\galerie\new_york\12.jpg" />
+    <Content Include="Content\Images\galerie\new_york\12x.jpg" />
+    <Content Include="Content\Images\galerie\new_york\1x.jpg" />
+    <Content Include="Content\Images\galerie\new_york\2.jpg" />
+    <Content Include="Content\Images\galerie\new_york\2x.jpg" />
+    <Content Include="Content\Images\galerie\new_york\3.jpg" />
+    <Content Include="Content\Images\galerie\new_york\3x.jpg" />
+    <Content Include="Content\Images\galerie\new_york\4.jpg" />
+    <Content Include="Content\Images\galerie\new_york\4x.jpg" />
+    <Content Include="Content\Images\galerie\new_york\5.jpg" />
+    <Content Include="Content\Images\galerie\new_york\5x.jpg" />
+    <Content Include="Content\Images\galerie\new_york\6.jpg" />
+    <Content Include="Content\Images\galerie\new_york\6x.jpg" />
+    <Content Include="Content\Images\galerie\new_york\7.jpg" />
+    <Content Include="Content\Images\galerie\new_york\7x.jpg" />
+    <Content Include="Content\Images\galerie\new_york\8.jpg" />
+    <Content Include="Content\Images\galerie\new_york\8x.jpg" />
+    <Content Include="Content\Images\galerie\new_york\9.jpg" />
+    <Content Include="Content\Images\galerie\new_york\9x.jpg" />
+    <Content Include="Content\Images\galerie\oxford\1.jpg" />
+    <Content Include="Content\Images\galerie\oxford\1x.jpg" />
+    <Content Include="Content\Images\galerie\oxford\2.jpg" />
+    <Content Include="Content\Images\galerie\oxford\2x.jpg" />
+    <Content Include="Content\Images\galerie\oxford\3.jpg" />
+    <Content Include="Content\Images\galerie\oxford\3x.jpg" />
+    <Content Include="Content\Images\galerie\oxford\4.jpg" />
+    <Content Include="Content\Images\galerie\oxford\4x.jpg" />
+    <Content Include="Content\Images\galerie\robin_hood\1.jpg" />
+    <Content Include="Content\Images\galerie\robin_hood\1x.jpg" />
+    <Content Include="Content\Images\galerie\robin_hood\2.jpg" />
+    <Content Include="Content\Images\galerie\robin_hood\2x.jpg" />
+    <Content Include="Content\Images\galerie\saltburn\1.jpg" />
+    <Content Include="Content\Images\galerie\saltburn\1x.jpg" />
+    <Content Include="Content\Images\galerie\saltburn\2.jpg" />
+    <Content Include="Content\Images\galerie\saltburn\2x.jpg" />
+    <Content Include="Content\Images\galerie\saltburn\3.jpg" />
+    <Content Include="Content\Images\galerie\saltburn\3x.jpg" />
+    <Content Include="Content\Images\galerie\saltburn\4.jpg" />
+    <Content Include="Content\Images\galerie\saltburn\4x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\1.jpg" />
+    <Content Include="Content\Images\galerie\singapor\10.jpg" />
+    <Content Include="Content\Images\galerie\singapor\10x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\11.jpg" />
+    <Content Include="Content\Images\galerie\singapor\11x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\12.jpg" />
+    <Content Include="Content\Images\galerie\singapor\12x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\13.jpg" />
+    <Content Include="Content\Images\galerie\singapor\13x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\14.jpg" />
+    <Content Include="Content\Images\galerie\singapor\14x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\15.jpg" />
+    <Content Include="Content\Images\galerie\singapor\15x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\1x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\2.jpg" />
+    <Content Include="Content\Images\galerie\singapor\2x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\3.jpg" />
+    <Content Include="Content\Images\galerie\singapor\3x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\4.jpg" />
+    <Content Include="Content\Images\galerie\singapor\4x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\5.jpg" />
+    <Content Include="Content\Images\galerie\singapor\5x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\6.jpg" />
+    <Content Include="Content\Images\galerie\singapor\6x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\7.jpg" />
+    <Content Include="Content\Images\galerie\singapor\7x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\8.jpg" />
+    <Content Include="Content\Images\galerie\singapor\8x.jpg" />
+    <Content Include="Content\Images\galerie\singapor\9.jpg" />
+    <Content Include="Content\Images\galerie\singapor\9x.jpg" />
+    <Content Include="Content\Images\galerie\whitby\1.jpg" />
+    <Content Include="Content\Images\galerie\whitby\1x.jpg" />
+    <Content Include="Content\Images\galerie\whitby\2.jpg" />
+    <Content Include="Content\Images\galerie\whitby\2x.jpg" />
+    <Content Include="Content\Images\galerie\whitby\3.jpg" />
+    <Content Include="Content\Images\galerie\whitby\3x.jpg" />
+    <Content Include="Content\Images\galerie\whitby\4.jpg" />
+    <Content Include="Content\Images\galerie\whitby\4x.jpg" />
+    <Content Include="Content\Images\git-icon.png" />
+    <Content Include="Content\Images\in-icon.png" />
+    <Content Include="Content\Images\preview\chef.png" />
+    <Content Include="Content\Images\preview\kinect.png" />
+    <Content Include="Content\Images\preview\log.png" />
+    <Content Include="Content\Images\preview\mcd.png" />
+    <Content Include="Content\Images\preview\medecin.png" />
+    <Content Include="Content\Images\preview\photoshop.png" />
+    <Content Include="Content\Images\preview\test.png" />
+    <Content Include="Content\site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Blog\Post1.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Menu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Accueil.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Blog.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Realisations.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Galerie.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Presentation.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Blog\Post2.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Softox.pubxml" />
+    <Content Include="Views\Projects\Football\Index.cshtml" />
+    <Content Include="Views\Projects\Football\PlayerRankingTemplate.cshtml" />
+    <Content Include="Views\Projects\Football\ResultsTemplate.cshtml" />
+    <Content Include="Views\Projects\Football\TeamRankingTemplate.cshtml" />
+    <Content Include="Views\Projects\Chat\Index.cshtml" />
+    <Content Include="Views\Blog\Post3.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2283/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Romain Parage</title>
+    <meta charset="utf-8">
+    <meta name="description" content="E-Portfolio - Romain Parage">
+    <meta name="author" content="Romain Parage">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="~/Content/Images/favicon.ico" type="image/x-icon" />
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.js"></script>
+    @Scripts.Render("~/Script/javascript")
+</head>
+<body>
+    @Html.Partial("_Menu")
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>
