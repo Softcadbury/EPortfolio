@@ -1,39 +1,54 @@
 $(document).ready(function () {
-    // Pages navigation
-    function show_page(page_id) {
-        $(page_id + '_container').show("drop", {}, "slow");
-        $(page_id + '_button').parent().addClass('active');
-    }
+    init_page_navigation();
+    init_tab_navigation();
+    init_auto_navigation();
+    init_fancybox();
+    init_editor_coloration();
+});
 
+// Pages navigation
+function init_page_navigation() {
     $('a[id$=button]').click(function () {
         $('#menu li').removeClass('active');
         $('.container_sub').hide();
         show_page('#' + $(this).attr("id").replace('_brand', '').replace('_button', ''));
     });
+}
 
-    // Tabs navigation
-    function show_tab(tab_id) {
-        $('a[href="#' + tab_id + '"]').tab('show');
-    }
+function show_page(page_id) {
+    $(page_id + '_container').show();
+    $(page_id + '_button').parent().addClass('active');
+}
 
+// Tabs navigation
+function init_tab_navigation() {
     $('a[data-toggle=tab]').click(function () {
         var url = this.href.substring(this.href.indexOf('#') + 1, this.href.length);
-        document.location.hash = document.location.hash.split('_')[0] + '_' + url;
+        document.location.hash = document.location.hash.split('/')[0] + '/' + url;
     });
+}
 
-    // Auto navigation
-    var hash = document.location.hash.split('_');
+function show_tab(tab_id) {
+    $('a[href="#' + tab_id + '"]').tab('show');
+}
+
+// Auto navigation
+function init_auto_navigation() {
+    var hash = document.location.hash.split('/');
     show_page(hash[0] == '' ? '#accueil' : hash[0]);
     show_tab(hash.length == 2 ? hash[1] : '');
+}
 
-    // Fancybox activation
+// Fancybox activation
+function init_fancybox() {
     $(".fancybox").fancybox({
         openEffect: 'elastic',
         closeEffect: 'elastic',
         helpers: { title: { type: 'inside' } }
     });
-
-    // Editor coloration
+}
+// Editor coloration
+function init_editor_coloration() {
     $("pre").each(function () {
         var content = $(this).html();
 
@@ -46,9 +61,9 @@ $(document).ready(function () {
 
         $(this).html(content);
     });
-});
+}
 
-// Contact form
+// Function called after mail sending
 function OnMailSend(e) {
     $('#mail').hide();
     $('#mail_send').show();
