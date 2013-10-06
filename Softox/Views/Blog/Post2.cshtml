@@ -1,35 +1,65 @@
 ﻿<h2>C# 2 - Delegates</h2>
 
 <h3>Initialization</h3>
+<p>Delegates allow you to store methods into variable.</p>
 <pre>
 delegate int MyDelegate (int param);
 delegate void MyGenericDelegate&lt;T&gt; (T param);
 </pre>
 
 <h3>Builtins</h3>
-<p>The framework provide some useful builtins</p>
+<p>The framework provide some useful builtins.</p>
 <pre>
-delegate void Action&lt;T&gt; (T param);
-delegate TResult Func&lt;T1, T2, out TResult&gt; (T1 param1, T2 param2); // You can use between 0 and 8 parameters
+delegate void Action&lt;T&gt; (T param); // You can use between 0 and 16 parameters
+delegate TResult Func&lt;T1, T2, out TResult&gt; (T1 param1, T2 param2); // You can use between 0 and 16 parameters
+
 delegate EventHandler (Object sender, EventArgs e);
 delegate EventHandler&lt;T&gt; (Object sender, T e);
 </pre>
 
-<h3>How to use it</h3>
+<h3>Use case 1</h3>
 <pre>
-public void OptionalParameters(int param1 = 1, int param2 = 2)
+public static int Square(int i)
 {
-    Console.WriteLine(param1 + " - " + param2);
+    return i * i;
 }
 
-public void Main()
+public static void Main()
 {
-    
+    MyDelegate a = new MyDelegate(Square);
+    MyDelegate b = Square;
+    Func&lt;int, int&gt; c = Square;
+
+    Console.WriteLine(a(2) + "-" + b(3) + "-" + c(4)); // Write "4-9-16"
+}
+</pre>
+
+<h3>Use case 2</h3>
+<pre>
+public static void WriteLola()
+{
+    Console.Write("Lola");
+}
+
+public static void Main()
+{
+    Action a = WriteLola;
+    a += WriteLola;
+    a(); // Write "LolaLola"
 }
 </pre>
 
 <h3>Events</h3>
+The event keyword turns the delegate field into a property and hides all members except += & -=.
 <pre>
+static event Action a;
+
+public static void Main()
+{
+    a += WriteLola;
+    a += WriteLola;
+    a(); // Write "LolaLola"
+}
 </pre>
 
 <h3>Anonymous methods</h3>
@@ -38,4 +68,15 @@ public void Main()
 
 <h3>Lambda expressions</h3>
 <pre>
+MyDelegate a += x => 
+    (int x) =>
+    (x, y) =>
+    () =>
+</pre>
+<pre>
+Func&lt;int, int&gt; f1 = x => x * x;
+Func&lt;int, int&gt; f2 = x => { int i = 4; return i * x; };
+
+int a = f1(2); // a = 4
+int b = f2(2); // b = 8
 </pre>

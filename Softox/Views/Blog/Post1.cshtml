@@ -2,12 +2,12 @@
 
 <h3>Optional parameters</h3>
 <pre>
-public void OptionalParameters(int param1 = 1, int param2 = 2)
+public static void OptionalParameters(int param1 = 1, int param2 = 2)
 {
     Console.WriteLine(param1 + " - " + param2);
 }
 
-public void Main()
+public static void Main()
 {
     OptionalParameters(2, 5); // Write "2 - 5"
     OptionalParameters(2); // Write "2 - 2"
@@ -16,20 +16,25 @@ public void Main()
 
 <h3>Named parameters</h3>
 <pre>
-public void NamedParameters()
+public static void NamedParameters()
 {
-    OptionalParameters(param2 : 3); // Write "1 - 3"
+    OptionalParameters(param2: 3);
+}
+
+public static void Main()
+{
+    NamedParameters(); // Write "1 - 3"
 }
 </pre>
 
 <h3>Out parameters</h3>
 <pre>
-public void OutParameter(out int param)
+public static void OutParameter(out int param)
 {
     param = 5; // The param must be initialize before the end of the method
 }
 
-public void Main()
+public static void Main()
 {
     int param;
     OutParameter(out param);
@@ -39,29 +44,29 @@ public void Main()
 
 <h3>Ref parameters</h3>
 <pre>
-public void RefParameter(ref string param)
+public static void RefParameter(ref string param)
 {
-    param = "Lola2";
+    param += "2";
 }
 
-public void Main()
+public static void Main()
 {
     string param = "Lola"; // The param must be initialize before the call of the method
-    OutParameter(ref param);
+    RefParameter(ref param);
     Console.WriteLine(param); // Write "Lola2"
 }
 </pre>
 
 <h3>Array parameters</h3>
 <pre>
-public void ArrayParameter(params int[] paramArray)
+public static void ArrayParameter(params int[] paramArray)
 {
     foreach (var param in paramArray)
         Console.Write(param + " ");
 }
 
-public void Main()
+public static void Main()
 {
-    ListParameter(1, 2, 5); // Write "1 2 5 "
+    ArrayParameter(1, 2, 5); // Write "1 2 5 "
 }
 </pre>

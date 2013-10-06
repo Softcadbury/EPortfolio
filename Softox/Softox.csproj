@@ -127,7 +127,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProjectsController.cs" />
+    <Compile Include="Controllers\FootballController.cs" />
     <Compile Include="Controllers\ToolsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -185,11 +185,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\Softox.pubxml" />
-    <Content Include="Views\Projects\Football\Index.cshtml" />
-    <Content Include="Views\Projects\Football\PlayerRankingTemplate.cshtml" />
-    <Content Include="Views\Projects\Football\ResultsTemplate.cshtml" />
-    <Content Include="Views\Projects\Football\TeamRankingTemplate.cshtml" />
-    <Content Include="Views\Projects\Chat\Index.cshtml" />
+    <Content Include="Views\Football\Index.cshtml" />
+    <Content Include="Views\Football\PlayerRankingTemplate.cshtml" />
+    <Content Include="Views\Football\ResultsTemplate.cshtml" />
+    <Content Include="Views\Football\TeamRankingTemplate.cshtml" />
     <Content Include="Views\Blog\Post3.cshtml" />
   </ItemGroup>
   <ItemGroup />

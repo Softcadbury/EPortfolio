@@ -52,7 +52,8 @@ function init_editor_coloration() {
     $("pre").each(function () {
         var content = $(this).html();
 
-        var keywords = ['public ', 'delegate ', 'void ', 'Object', 'string ', 'int ', 'int[] ', 'out ', 'ref ', 'var'];
+        var keywords = ['public ', 'void ', 'static ', 'return', 'delegate ', 'event', 'Func',
+                        'Object', 'string ', 'int ', 'int[] ', 'out ', 'ref ', 'var'];
         for (var i = 0; i < keywords.length; i++) {
             content = content.replace(new RegExp(keywords[i], 'g'), '<span style="color: blue;">' + keywords[i] + '</span>');
         }
