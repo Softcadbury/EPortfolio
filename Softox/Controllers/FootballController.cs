@@ -13,11 +13,9 @@ using System.Web.Mvc;
 
 namespace Softox.Controllers
 {
-    public class ProjectsController : Controller
+    public class FootballController : Controller
     {
-        #region Football
-
-        public ActionResult Football()
+        public ActionResult Index()
         {
             List<string> pageContentList = GetPageContentList();
 
@@ -26,7 +24,7 @@ namespace Softox.Controllers
             InitTeamRanking(football, pageContentList);
             InitPlayerRanking(football, pageContentList);
 
-            return View("Football/Index", football);
+            return View(football);
         }
 
         #region Pages task
@@ -204,81 +202,5 @@ namespace Softox.Controllers
         }
 
         #endregion Player ranking
-
-        #endregion Football
-
-        #region Chat
-
-        public ActionResult Chat()
-        {
-            return View();
-        }
-
-        //public class ChatHub : Hub
-        //{
-        //    private static List<string> users = new List<string>();
-
-        //    public void Send(string name, string message)
-        //    {
-        //        //AddMessageinCache(userName, message);
-        //        Clients.All.broadcastMessage(name, message);
-        //    }
-
-        //    public override Task OnConnected()
-        //    {
-        //        string clientId = GetClientId();
-
-        //        if (users.IndexOf(clientId) == -1)
-        //            users.Add(clientId);
-
-        //        ShowUsersOnLine();
-
-        //        return base.OnConnected();
-        //    }
-
-        //    public override Task OnReconnected()
-        //    {
-        //        string clientId = GetClientId();
-
-        //        if (users.IndexOf(clientId) == -1)
-        //            users.Add(clientId);
-
-        //        ShowUsersOnLine();
-
-        //        return base.OnReconnected();
-        //    }
-
-        //    public override Task OnDisconnected()
-        //    {
-        //        string clientId = GetClientId();
-
-        //        if (users.IndexOf(clientId) > -1)
-        //            users.Remove(clientId);
-
-        //        ShowUsersOnLine();
-
-        //        return base.OnDisconnected();
-        //    }
-
-        //    private string GetClientId()
-        //    {
-        //        string clientId = "";
-
-        //        if (!(Context.QueryString["clientId"] == null))
-        //            clientId = Context.QueryString["clientId"].ToString();
-
-        //        if (clientId.Trim() == "")
-        //            clientId = Context.ConnectionId;
-
-        //        return clientId;
-        //    }
-
-        //    public void ShowUsersOnLine()
-        //    {
-        //        Clients.All.showUsersOnLine(users);
-        //    }
-        //}
-
-        #endregion Chat
     }
 }
