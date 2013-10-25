@@ -1,32 +1,38 @@
 /* General */
-body {
+body
+{
     background: url(Images/cream_dust.png) repeat 0 0;
     padding: 70px 0 30px 0;
 }
 
-.container_sub {
+.container_sub
+{
     display: none;
 }
 
-h1 {
+h1
+{
     padding: 0 0 20px 0;
     font-size: 50px;
     font-weight: bold;
 }
 
-h3 {
+h3
+{
     margin: 15px 0 10px 0;
     font-size: 22px;
     font-weight: bold;
 }
 
-h6 {
+h6
+{
     margin: 0 0 5px 0;
     font-weight: bold;
     color: #999;
 }
 
-.tab-content {
+.tab-content
+{
     text-align: justify;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(221, 221, 221);
@@ -35,79 +41,94 @@ h6 {
 
 #presentation_container .tab-content,
 #realisations_container .tab-content,
-#galerie_container .tab-content {
+#galerie_container .tab-content
+{
     padding: 10px 15px;
     border-radius: 0px 0px 4px 4px;
     border-top: 0;
 }
 
-div .thumbnail {
+div .thumbnail
+{
     background: url(Images/cream_dust.png) repeat 0 0;
     padding: 0 15px;
 }
 
-.field-validation-error {
+.field-validation-error
+{
     color: red;
 }
 
-.alert {
+.alert
+{
     margin: 0;
 }
 
 /* Accueil */
-#accueil_container {
+#accueil_container
+{
     text-align: center;
 }
 
-    #accueil_container h1 {
+    #accueil_container h1
+    {
         font-size: 100px;
     }
 
-    #accueil_container p {
+    #accueil_container p
+    {
         font-size: 30px;
         margin-left: 15%;
         margin-right: 15%;
     }
 
-    #accueil_container .btn {
+    #accueil_container .btn
+    {
         font-size: 21px;
         margin-top: 20px;
         padding: 11px 24px;
     }
 
-#mail_send {
+#mail_send
+{
     display: none;
 }
 
 /* Présentation */
-#presentation_container div.icon {
+#presentation_container div.icon
+{
     margin-top: 10px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
 }
 
-    #presentation_container div.icon:hover {
+    #presentation_container div.icon:hover
+    {
         margin-top: 5px;
         -webkit-transition: all 0.3s;
         -moz-transition: all 0.3s;
     }
 
 /* Réalisations */
-#realisations_container ul {
+#realisations_container .tab-content ul
+{
     list-style-type: none;
 }
 
-#realisations_container li {
+#realisations_container .tab-content li
+{
     margin-top: 15px;
 }
 
 /* Blog */
-#blog_container .nav-stacked {
+#blog_container .nav-stacked
+{
     margin-bottom: 15px;
 }
 
 /* Galerie */
-#galerie_container img {
+#galerie_container img
+{
     border-radius: 6px;
     margin: 10px 0;
 }

@@ -9,13 +9,18 @@ public static void OptionalParameters(int param1 = 1, int param2 = 2)
 
 public static void Main()
 {
-    OptionalParameters(2, 5); // Write "2 - 5"
-    OptionalParameters(2); // Write "2 - 2"
+    OptionalParameters(3, 4); // Write "3 - 4"
+    OptionalParameters(5); // Write "5 - 2"
 }
 </pre>
 
 <h3>Named parameters</h3>
 <pre>
+public static void OptionalParameters(int param1 = 1, int param2 = 2)
+{
+    Console.WriteLine(param1 + " - " + param2);
+}
+
 public static void NamedParameters()
 {
     OptionalParameters(param2: 3);
@@ -44,16 +49,16 @@ public static void Main()
 
 <h3>Ref parameters</h3>
 <pre>
-public static void RefParameter(ref string param)
+public static void RefParameter(ref int param)
 {
-    param += "2";
+    param += 2;
 }
 
 public static void Main()
 {
-    string param = "Lola"; // The param must be initialize before the call of the method
+    int param = 1; // The param must be initialize before the call of the method
     RefParameter(ref param);
-    Console.WriteLine(param); // Write "Lola2"
+    Console.WriteLine(param); // Write "3"
 }
 </pre>
 
