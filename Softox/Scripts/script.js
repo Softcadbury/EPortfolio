@@ -53,7 +53,7 @@ function init_editor_coloration() {
         var content = $(this).html();
 
         var keywords = ['public ', 'void ', 'static ', 'return', 'delegate ', 'event', 'Func', 'Action',
-                        'Object', 'string ', 'int ', 'int[] ', 'out ', 'ref ', 'var'];
+                        'Object', 'string', 'int', 'int[] ', 'out ', 'ref ', 'var'];
         for (var i = 0; i < keywords.length; i++) {
             content = content.replace(new RegExp(keywords[i], 'g'), '<span style="color: blue;">' + keywords[i] + '</span>');
         }
@@ -65,7 +65,16 @@ function init_editor_coloration() {
 }
 
 // Function called after mail sending
+function OnBegin(e) {
+    $('#mail_send_button').button('loading');
+}
+
 function OnMailSend(e) {
     $('#mail').hide();
-    $('#mail_send').show();
+    $('#mail_send_success').show();
+}
+
+function OnFailure(e) {
+    $('#mail').hide();
+    $('#mail_send_failure').show();
 }

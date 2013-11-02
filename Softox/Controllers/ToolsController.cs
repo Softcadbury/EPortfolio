@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
@@ -14,13 +15,13 @@ namespace Softox.Controllers
         public void SendMail(MailModel model)
         {
             MailMessage mail = new MailMessage();
-            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-
-            mail.From = new MailAddress("Softox");
-            mail.To.Add("romain.parage@gmail.com");
-            mail.Subject = "Contact : " + model.Email;
+            mail.From = new MailAddress("addressFrom");
+            mail.To.Add("addressTo");
+            mail.Subject = "Prise de contact : " + model.Email;
             mail.Body = model.Message;
 
+            SmtpClient SmtpServer = new SmtpClient("smtpClinet");
+            SmtpServer.Credentials = new NetworkCredential("address", "mdp");
             SmtpServer.Send(mail);
         }
     }

@@ -9,7 +9,7 @@
 </div>
 
 @model Softox.Models.MailModel
-@using (Ajax.BeginForm("SendMail", "Tools", new AjaxOptions { OnSuccess = "OnMailSend" }))
+@using (Ajax.BeginForm("SendMail", "Tools", new AjaxOptions { OnBegin = "OnBegin", OnSuccess = "OnMailSend", OnFailure = "OnFailure" }))
 {
     <div class="modal fade" id="contact_content">
         <div class="modal-dialog">
@@ -26,18 +26,26 @@
                     </div>
                     <div class="form-group">
                         <label>@Html.LabelFor(m => m.Message)</label>
-                        @Html.TextBoxFor(m => m.Message, string.Empty, new { @class = "form-control", placeholder = "Entrez votre message" })
+                        @Html.TextBoxFor(m => m.Message, string.Empty, new { @class = "form-control", placeholder = "Entrez votre message", style = "height: 150px;" })
                         @Html.ValidationMessageFor(m => m.Message, null, new { @class = "error" })
                     </div>
                 </div>
                 <div class="modal-footer">
                     <a href="#" class="btn btn-default" data-dismiss="modal">Annuler</a>
-                    <input type="submit" class="btn btn-primary" value="Envoyer" />
+                    <input id="mail_send_button" type="submit" class="btn btn-primary" value="Envoyer" data-loading-text="Envoie en cours..."/>
                 </div>
             </div>
-            <div class="modal-content" id="mail_send">
+            <div class="modal-content" id="mail_send_success">
                 <div class="modal-body">
                     <div class="alert alert-success">Votre message a bien été envoyé</div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-default" data-dismiss="modal">Fermer</a>
+                </div>
+            </div>
+            <div class="modal-content" id="mail_send_failure">
+                <div class="modal-body">
+                    <div class="alert alert-danger">Une erreur est survenue</div>
                 </div>
                 <div class="modal-footer">
                     <a href="#" class="btn btn-default" data-dismiss="modal">Fermer</a>
