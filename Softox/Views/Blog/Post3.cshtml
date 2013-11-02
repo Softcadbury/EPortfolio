@@ -1,14 +1,25 @@
-﻿My favourite small feature of the Lookup class is that doing a lookup by key for a non-existent key returns an empty IEnumerable<T>, not null. That means the following key doesn't need any null checks of ContainsKey calls, or anything.
+﻿<h2>C# 3 - Value and reference types</h2>
 
-var productsByCategory = products.ToLookup(p => p.Category);
+<h3>Memmory</h3>
+<p></p>
 
-var category = "anything I like";
+<h3>Value types</h3>
+<p>
+Allocated on the Stack(Pile).
+Structure, Ennumerations, simply types (bool, int, float, ...)
+Can be destroyed and created quickly.
+Lifetime is determined by the defining scope.
+The equal operator copy the type in a new one.
+</p>
 
-// This is safe for ANY value of category
-foreach (var product in productsByCategory[category])
-{
-Console.WriteLine("\t" + product);
-}
+<h3>Reference types</h3>
+<p>
+Allocated on the Heap(Tas).
+String, Object
+Dynamic allocation, monitored by the .Net garbage collector.
+The equal operator results in a copy of the reference.
+String immutable
+</p>
 
-// Or even...
-Console.WriteLine(String.Join(", ", productsByCategory[category].Where(p => p.Value > 20));
+<h3>Boxing and unboxing</h3>
+<p></p>

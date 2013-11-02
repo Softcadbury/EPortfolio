@@ -190,6 +190,7 @@
     <Content Include="Views\Football\ResultsTemplate.cshtml" />
     <Content Include="Views\Football\TeamRankingTemplate.cshtml" />
     <Content Include="Views\Blog\Post3.cshtml" />
+    <Content Include="Views\Blog\Post4.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
