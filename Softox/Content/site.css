@@ -4,10 +4,6 @@ body {
     padding: 70px 0 30px 0;
 }
 
-.container_sub {
-    display: none;
-}
-
 h1 {
     padding: 0 0 20px 0;
     font-size: 50px;
@@ -54,6 +50,10 @@ div .thumbnail {
     margin: 0;
 }
 
+.display-none {
+    display: none;
+}
+
 /* Accueil */
 #accueil_container {
     text-align: center;
@@ -75,10 +75,6 @@ div .thumbnail {
         padding: 11px 24px;
     }
 
-#mail_send_success, #mail_send_failure {
-    display: none;
-}
-
 /* Présentation */
 #presentation_container div.icon {
     margin-top: 10px;
@@ -99,11 +95,6 @@ div .thumbnail {
 
 #realisations_container .tab-content li {
     margin-top: 15px;
-}
-
-/* Blog */
-#blog_container .nav-stacked {
-    margin-bottom: 15px;
 }
 
 /* Galerie */

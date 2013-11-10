@@ -156,9 +156,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Blog\Post1.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -180,20 +177,18 @@
     <Content Include="Views\Home\Presentation.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Blog\Post2.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Properties\PublishProfiles\Softox.pubxml" />
     <Content Include="Views\Football\Index.cshtml" />
     <Content Include="Views\Football\PlayerRankingTemplate.cshtml" />
     <Content Include="Views\Football\ResultsTemplate.cshtml" />
     <Content Include="Views\Football\TeamRankingTemplate.cshtml" />
-    <Content Include="Views\Blog\Post3.cshtml" />
-    <Content Include="Views\Blog\Post4.cshtml" />
+    <Content Include="Views\Home\BlogPost\CSharpParameters.cshtml" />
+    <Content Include="Views\Home\BlogPost\CSharpDelegates.cshtml" />
+    <Content Include="Views\Home\BlogPost\CSharpTypes.cshtml" />
+    <Content Include="Views\Home\BlogPost\CSharpLinQ.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Settings\" />
-    <Folder Include="Views\Home\Post\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
