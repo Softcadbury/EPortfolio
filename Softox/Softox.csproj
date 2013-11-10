@@ -141,7 +141,6 @@
     <Content Include="Content\site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Web.config" />
@@ -192,7 +191,10 @@
     <Content Include="Views\Blog\Post3.cshtml" />
     <Content Include="Views\Blog\Post4.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Settings\" />
+    <Folder Include="Views\Home\Post\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

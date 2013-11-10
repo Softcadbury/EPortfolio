@@ -9,7 +9,6 @@ namespace Softox
         {
             bundles.Add(new ScriptBundle("~/Script/javascript").Include(
                         "~/Scripts/jquery.unobtrusive-ajax.js",
-                        "~/Scripts/jquery.validate.js",
                         "~/Scripts/jquery.validate.unobtrusive.js",
                         "~/Scripts/script.js"));
 
