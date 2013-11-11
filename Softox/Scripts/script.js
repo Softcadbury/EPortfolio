@@ -1,42 +1,38 @@
 $(document).ready(function () {
-    init_page_navigation();
-    init_tab_navigation();
-    init_auto_navigation();
+    init_navigation();
     init_fancybox();
     init_editor_coloration();
 });
 
-// Pages navigation
-function init_page_navigation() {
-    $('a[id$=button]').click(function () {
-        $('#menu li').removeClass('active');
-        $('.container_sub').hide();
-        show_page('#' + $(this).attr("id").replace('_brand', '').replace('_button', ''));
+// Navigation initialization
+function init_navigation() {
+    var routes = $.sammy(function () {
+        this.get(/\#\/(.*)\/(.*)/, function (context) {
+            var result = this.params['splat'],
+                page = result[0],
+                tab = result[1];
+
+            if ($('a[href="#/' + page + '/"]').length == 0) {
+                document.location.hash = '#/accueil/';
+            }
+            else {
+                $('#navbar li').removeClass('active');
+                $('a[href="#/' + page + '/"]').parent().addClass('active');
+
+                $('.container-sub').hide();
+                $('#' + page).show();
+
+                $('a[href="#' + tab + '"]').tab('show');
+            }
+        });
     });
-}
 
-function show_page(page_id) {
-    $(page_id + '_container').show();
-    $(page_id + '_button').parent().addClass('active');
-}
+    routes.run('#/accueil/');
 
-// Tabs navigation
-function init_tab_navigation() {
     $('a[data-toggle=tab]').click(function () {
         var url = this.href.substring(this.href.indexOf('#') + 1, this.href.length);
-        document.location.hash = document.location.hash.split('/')[0] + '/' + url;
+        document.location.hash = '#/' + document.location.hash.split('/')[1] + '/' + url;
     });
-}
-
-function show_tab(tab_id) {
-    $('a[href="#' + tab_id + '"]').tab('show');
-}
-
-// Auto navigation
-function init_auto_navigation() {
-    var hash = document.location.hash.split('/');
-    show_page(hash[0] == '' ? '#accueil' : hash[0]);
-    show_tab(hash.length == 2 ? hash[1] : '');
 }
 
 // Fancybox activation
@@ -47,6 +43,7 @@ function init_fancybox() {
         helpers: { title: { type: 'inside' } }
     });
 }
+
 // Editor coloration
 function init_editor_coloration() {
     $("pre").each(function () {
@@ -54,6 +51,7 @@ function init_editor_coloration() {
 
         var keywords = ['public ', 'void ', 'static ', 'return', 'delegate ', 'event', 'Func', 'Action',
                         'Object', 'string', 'int', 'int[] ', 'out ', 'ref ', 'var', 'params'];
+
         for (var i = 0; i < keywords.length; i++) {
             content = content.replace(new RegExp(keywords[i], 'g'), '<span style="color: blue;">' + keywords[i] + '</span>');
         }
@@ -64,17 +62,17 @@ function init_editor_coloration() {
     });
 }
 
-// Function called after mail sending
+// Functions to manage mail sending
 function OnBegin(e) {
-    $('#mail_send_button').button('loading');
+    $('#contact_button').button('loading');
 }
 
 function OnMailSend(e) {
-    $('#mail').hide();
-    $('#mail_send_success').show();
+    $('#contact_form').hide();
+    $('#contact_success').show();
 }
 
 function OnFailure(e) {
-    $('#mail').hide();
-    $('#mail_send_failure').show();
+    $('#contact_form').hide();
+    $('#contact_failure').show();
 }
