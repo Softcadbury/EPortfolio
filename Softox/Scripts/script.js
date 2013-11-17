@@ -1,13 +1,18 @@
 $(document).ready(function () {
     init_navigation();
     init_fancybox();
-    init_editor_coloration();
+    init_editorColoration();
 });
 
 // Navigation initialization
 function init_navigation() {
+    var lockSammy = false;
+
     var routes = $.sammy(function () {
         this.get(/\#\/(.*)\/(.*)/, function (context) {
+            if (lockSammy)
+                return;
+
             var result = this.params['splat'],
                 page = result[0],
                 tab = result[1];
@@ -24,14 +29,18 @@ function init_navigation() {
 
                 $('a[href="#' + tab + '"]').tab('show');
             }
+
+            console.log('lola');
         });
     });
 
     routes.run('#/accueil/');
 
     $('a[data-toggle=tab]').click(function () {
+        lockSammy = true;
         var url = this.href.substring(this.href.indexOf('#') + 1, this.href.length);
         document.location.hash = '#/' + document.location.hash.split('/')[1] + '/' + url;
+        lockSammy = false;
     });
 }
 
@@ -45,7 +54,7 @@ function init_fancybox() {
 }
 
 // Editor coloration
-function init_editor_coloration() {
+function init_editorColoration() {
     $("pre").each(function () {
         var content = $(this).html();
 
