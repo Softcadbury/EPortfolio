@@ -30,7 +30,7 @@ namespace EPortfolio.Helpers
         {
             string url = VirtualPathUtility.ToAbsolute(String.Format("~/Content/Images/galerie/{0}/{1}", folder, num));
             return String.Format(@"
-                <div class='col-xs-12 col-sm-4 col-md-3'><a class='fancybox' rel=""{0}"" href='{1}.jpg' title=""{2}"">
+                <div class='col-xs-6 col-sm-4 col-md-3'><a class='fancybox' rel=""{0}"" href='{1}.jpg' title=""{2}"">
 	            <img src='{1}x.jpg' alt=""{2}"" /></a></div>", folder, url, tilte);
         }
     }

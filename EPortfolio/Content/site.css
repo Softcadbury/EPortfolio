@@ -27,7 +27,7 @@ h6 {
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(221, 221, 221);
     border-radius: 4px;
-    padding: 15px 15px 0 15px;
+    padding: 15px;
 }
 
 .tab-content-notop {
@@ -35,12 +35,8 @@ h6 {
     border-radius: 0px 0px 4px 4px;
 }
 
-.azertyytreza {
-    background: url(Images/cream_dust.png) repeat 0 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 0 15px;
-    margin-bottom: 15px;
+.tab-content-nopadding {
+    padding-bottom: 0;
 }
 
 .modal-dialog {
@@ -58,12 +54,6 @@ h6 {
 .display-none {
     display: none;
 }
-
-/*.thumbnail {
-    background: url(Images/cream_dust.png) repeat 0 0;
-    padding: 0 15px;
-
-}*/
 
 /* Accueil */
 #accueil {
@@ -101,14 +91,13 @@ h6 {
     }
 
 /* Réalisations */
-/*#realisations .tab-content ul {
-    list-style-type: none;
-    margin-bottom: 0;
+.rea {
+    background: url(Images/cream_dust.png) repeat 0 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0 15px;
+    margin-bottom: 15px;
 }
-
-#realisations .tab-content li {
-    margin-top: 15px;
-}*/
 
 /* Galerie */
 #galerie img {
