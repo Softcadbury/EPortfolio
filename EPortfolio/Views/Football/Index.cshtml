@@ -15,12 +15,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="~/Content/Images/favicon.ico" type="image/x-icon" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 20px;
+            background-color: black;
+        }
+
+        table {
+            background-color: white;
+        }
+
+        td {
+            padding: 3px 5px !important;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        @Html.Raw(FootballHelper.DisplayPlayerRanking( @Model.playerRankingEngland))
-        @Html.Raw(FootballHelper.DisplayTeamRanking(@Model.teamRankingEngland))
-        @Html.Raw(FootballHelper.DisplayTeamResult(@Model.resultsEngland))
+        <div class="row">
+            <div class="col-md-4">
+                @Html.Raw(FootballHelper.DisplayPlayerRanking(@Model.playerRankingEngland))
+            </div>
+            <div class="col-md-4">
+                @Html.Raw(FootballHelper.DisplayPlayerRanking(@Model.playerRankingSpain))
+            </div>
+            <div class="col-md-4">
+                @Html.Raw(FootballHelper.DisplayPlayerRanking(@Model.playerRankingItalia))
+            </div>
+            <div class="col-md-4">
+                @Html.Raw(FootballHelper.DisplayPlayerRanking(@Model.playerRankingGermany))
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                @Html.Raw(FootballHelper.DisplayTeamRanking(@Model.teamRankingEngland))
+            </div>
+            <div class="col-md-4">
+                @Html.Raw(FootballHelper.DisplayTeamRanking(@Model.teamRankingSpain))
+            </div>
+            <div class="col-md-4">
+                @Html.Raw(FootballHelper.DisplayTeamRanking(@Model.teamRankingItalia))
+            </div>
+            <div class="col-md-4">
+                @Html.Raw(FootballHelper.DisplayTeamRanking(@Model.teamRankingGermany))
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                @Html.Raw(FootballHelper.DisplayTeamResult(@Model.resultsEngland))
+            </div>
+            <div class="col-md-4">
+                @Html.Raw(FootballHelper.DisplayTeamResult(@Model.resultsSpain))
+            </div>
+            <div class="col-md-4">
+                @Html.Raw(FootballHelper.DisplayTeamResult(@Model.resultsItalia))
+            </div>
+            <div class="col-md-4">
+                @Html.Raw(FootballHelper.DisplayTeamResult(@Model.resultsGermany))
+            </div>
+        </div>
     </div>
 </body>
 </html>
