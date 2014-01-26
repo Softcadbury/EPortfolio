@@ -3,7 +3,7 @@ using System.Web;
 
 namespace EPortfolio.Helpers
 {
-    public class ButtonHelper
+    public static class ButtonHelper
     {
         public static string FancyboxButton(string link)
         {

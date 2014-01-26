@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+
+@model DataModel.Football.Football
+@using EPortfolio.Helpers
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Football - Romain Parage</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Football - Romain Parage">
+    <meta name="author" content="Romain Parage">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="~/Content/Images/favicon.ico" type="image/x-icon" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        @Html.Raw(FootballHelper.DisplayPlayerRanking( @Model.playerRankingEngland))
+        @Html.Raw(FootballHelper.DisplayTeamRanking(@Model.teamRankingEngland))
+        @Html.Raw(FootballHelper.DisplayTeamResult(@Model.resultsEngland))
+    </div>
+</body>
+</html>

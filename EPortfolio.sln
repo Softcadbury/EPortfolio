@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPortfolio", "EPortfolio\EPortfolio.csproj", "{B14AC4A7-C814-44B7-8D39-22A114C4EC3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballResultsGenerator", "FootballResultsGenerator\FootballResultsGenerator.csproj", "{AA5EB915-FF38-47B6-9B01-63D5484D29E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{C746FBC7-FD64-4167-815E-DC7502DDF774}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{B14AC4A7-C814-44B7-8D39-22A114C4EC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B14AC4A7-C814-44B7-8D39-22A114C4EC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B14AC4A7-C814-44B7-8D39-22A114C4EC3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA5EB915-FF38-47B6-9B01-63D5484D29E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA5EB915-FF38-47B6-9B01-63D5484D29E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA5EB915-FF38-47B6-9B01-63D5484D29E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA5EB915-FF38-47B6-9B01-63D5484D29E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C746FBC7-FD64-4167-815E-DC7502DDF774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C746FBC7-FD64-4167-815E-DC7502DDF774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C746FBC7-FD64-4167-815E-DC7502DDF774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C746FBC7-FD64-4167-815E-DC7502DDF774}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
