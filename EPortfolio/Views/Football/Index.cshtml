@@ -3,7 +3,6 @@
 }
 
 @model DataModel.Football.Football
-@using EPortfolio.Helpers
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,58 +21,58 @@
             background-color: black;
         }
 
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+            height: 140px;
+        }
+
         table {
             background-color: white;
+            margin-bottom: 50px !important;
+        }
+
+        tr:nth-child(odd) {
+            background: #ebebeb;
         }
 
         td {
             padding: 3px 5px !important;
+        }
+
+        .score {
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                @Html.Raw(FootballHelper.DisplayPlayerRanking(@Model.playerRankingEngland))
-            </div>
-            <div class="col-md-4">
-                @Html.Raw(FootballHelper.DisplayPlayerRanking(@Model.playerRankingSpain))
-            </div>
-            <div class="col-md-4">
-                @Html.Raw(FootballHelper.DisplayPlayerRanking(@Model.playerRankingItalia))
-            </div>
-            <div class="col-md-4">
-                @Html.Raw(FootballHelper.DisplayPlayerRanking(@Model.playerRankingGermany))
-            </div>
+            @Html.Partial("TeamResultTemplate", Model.resultsFrance, new ViewDataDictionary {{"logo", "fr.jpg"}})
+            @Html.Partial("TeamRankingTemplate", Model.teamRankingFrance)
+            @Html.Partial("PlayerRankingTemplate", Model.playerRankingFrance)
         </div>
         <div class="row">
-            <div class="col-md-4">
-                @Html.Raw(FootballHelper.DisplayTeamRanking(@Model.teamRankingEngland))
-            </div>
-            <div class="col-md-4">
-                @Html.Raw(FootballHelper.DisplayTeamRanking(@Model.teamRankingSpain))
-            </div>
-            <div class="col-md-4">
-                @Html.Raw(FootballHelper.DisplayTeamRanking(@Model.teamRankingItalia))
-            </div>
-            <div class="col-md-4">
-                @Html.Raw(FootballHelper.DisplayTeamRanking(@Model.teamRankingGermany))
-            </div>
+            @Html.Partial("TeamResultTemplate", Model.resultsEngland, new ViewDataDictionary {{"logo", "eng.jpg"}})
+            @Html.Partial("TeamRankingTemplate", Model.teamRankingEngland)
+            @Html.Partial("PlayerRankingTemplate", Model.playerRankingEngland)
         </div>
         <div class="row">
-            <div class="col-md-4">
-                @Html.Raw(FootballHelper.DisplayTeamResult(@Model.resultsEngland))
-            </div>
-            <div class="col-md-4">
-                @Html.Raw(FootballHelper.DisplayTeamResult(@Model.resultsSpain))
-            </div>
-            <div class="col-md-4">
-                @Html.Raw(FootballHelper.DisplayTeamResult(@Model.resultsItalia))
-            </div>
-            <div class="col-md-4">
-                @Html.Raw(FootballHelper.DisplayTeamResult(@Model.resultsGermany))
-            </div>
+            @Html.Partial("TeamResultTemplate", Model.resultsSpain, new ViewDataDictionary {{"logo", "esp.jpg"}})
+            @Html.Partial("TeamRankingTemplate", Model.teamRankingSpain)
+            @Html.Partial("PlayerRankingTemplate", Model.playerRankingSpain)
+        </div>
+        <div class="row">
+            @Html.Partial("TeamResultTemplate", Model.resultsItalia, new ViewDataDictionary {{"logo", "it.jpg"}})
+            @Html.Partial("TeamRankingTemplate", Model.teamRankingItalia)
+            @Html.Partial("PlayerRankingTemplate", Model.playerRankingItalia)
+        </div>
+        <div class="row">
+            @Html.Partial("TeamResultTemplate", Model.resultsGermany, new ViewDataDictionary {{"logo", "ger.jpg"}})
+            @Html.Partial("TeamRankingTemplate", Model.teamRankingGermany)
+            @Html.Partial("PlayerRankingTemplate", Model.playerRankingGermany)
         </div>
     </div>
 </body>

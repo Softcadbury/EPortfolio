@@ -130,7 +130,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ButtonHelper.cs" />
-    <Compile Include="Helpers\FootballHelper.cs" />
     <Compile Include="Models\MailModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -155,6 +154,9 @@
     <None Include="Properties\PublishProfiles\EPortfolio.pubxml" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Views\Football\Index.cshtml" />
+    <Content Include="Views\Football\PlayerRankingTemplate.cshtml" />
+    <Content Include="Views\Football\TeamRankingTemplate.cshtml" />
+    <Content Include="Views\Football\TeamResultTemplate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

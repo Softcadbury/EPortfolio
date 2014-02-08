@@ -1,0 +1,22 @@
+﻿@model List<DataModel.Football.TeamRanking>
+<div class="col-md-4">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Team</th>
+            <th>Point</th>
+            <th>Day</th>
+            <th>Diff</th>
+        </tr>
+        @foreach (var item in @Model.Select((value, index) => new { value, index }))
+        {
+            <tr>
+                <td>@(item.index + 1)</td>
+                <td><img @Html.Raw(@item.value.Image) />@Html.Raw(@item.value.TeamName)</td>
+                <td>@item.value.Point</td>
+                <td>@item.value.Day</td>
+                <td>@item.value.Difference</td>
+            </tr>
+        }
+    </table>
+</div>
