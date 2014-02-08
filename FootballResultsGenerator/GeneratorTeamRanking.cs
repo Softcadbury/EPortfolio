@@ -11,8 +11,8 @@ namespace FootballResultsGenerator
             football.teamRankingFrance = GetTeamRanking(pageContentList[5]);
             football.teamRankingEngland = GetTeamRanking(pageContentList[6]);
             football.teamRankingSpain = GetTeamRanking(pageContentList[7]);
-            football.teamRankingGermany = GetTeamRanking(pageContentList[8]);
-            football.teamRankingItalia = GetTeamRanking(pageContentList[9]);
+            football.teamRankingItalia = GetTeamRanking(pageContentList[8]);
+            football.teamRankingGermany = GetTeamRanking(pageContentList[9]);
         }
 
         private static List<TeamRanking> GetTeamRanking(string pageContent)
@@ -25,13 +25,12 @@ namespace FootballResultsGenerator
             var dayList = Regex.Matches(sectionContent.Value, @"<div class=""j"">(.*?)</div>", RegexOptions.IgnoreCase);
             var differenceList = Regex.Matches(sectionContent.Value, @"<div class=""diff"">(.*?)</div>", RegexOptions.IgnoreCase);
 
-            List<TeamRanking> teamRankingList = new List<TeamRanking>();
+            var teamRankingList = new List<TeamRanking>();
 
             for (int i = 0; i < teamList.Count; i++)
             {
                 teamRankingList.Add(new TeamRanking
                 {
-                    Rank = i + 1,
                     TeamName = teamList[i].Groups[1].ToString(),
                     Image = imageList[i].Groups[1].ToString(),
                     Point = pointList[i].Groups[1].ToString(),

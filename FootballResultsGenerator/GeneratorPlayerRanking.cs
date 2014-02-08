@@ -11,8 +11,8 @@ namespace FootballResultsGenerator
             football.playerRankingFrance = GetPlayerRanking(pageContentList[10]);
             football.playerRankingEngland = GetPlayerRanking(pageContentList[11]);
             football.playerRankingSpain = GetPlayerRanking(pageContentList[12]);
-            football.playerRankingGermany = GetPlayerRanking(pageContentList[13]);
-            football.playerRankingItalia = GetPlayerRanking(pageContentList[14]);
+            football.playerRankingItalia = GetPlayerRanking(pageContentList[13]);
+            football.playerRankingGermany = GetPlayerRanking(pageContentList[14]);
         }
 
         private static List<PlayerRanking> GetPlayerRanking(string pageContent)
@@ -23,18 +23,23 @@ namespace FootballResultsGenerator
             var imageList = Regex.Matches(sectionContent.Value, @"<img(.*?)/>", RegexOptions.IgnoreCase);
             var pointList = Regex.Matches(sectionContent.Value, @"<div class=""points"">(.*?)</div>", RegexOptions.IgnoreCase);
 
-            List<PlayerRanking> playerRankingList = new List<PlayerRanking>();
+            var playerRankingList = new List<PlayerRanking>();
 
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 20; i++)
             {
                 playerRankingList.Add(new PlayerRanking
                 {
-                    Rank = i + 1,
                     PlayerName = playerList[i].Groups[1].ToString(),
                     Image = imageList[i].Groups[1].ToString(),
                     Goal = pointList[i * 2].Groups[1].ToString(),
                     Match = pointList[i * 2 + 1].Groups[1].ToString()
                 });
+            }
+
+            foreach (var item in playerRankingList)
+            {
+                if (item.Goal.IndexOf("(") != -1)
+                    item.Goal = item.Goal.Remove(item.Goal.IndexOf("("));
             }
 
             return playerRankingList;
