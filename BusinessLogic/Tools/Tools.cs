@@ -7,9 +7,9 @@ namespace BusinessLogic.Tools
     {
         public static void SendMail(MailMessage mail)
         {
-            SmtpClient SmtpServer = new SmtpClient("smtpClinet");
-            SmtpServer.Credentials = new NetworkCredential("address", "mdp");
-            SmtpServer.Send(mail);
+            SmtpClient smtpClient = new SmtpClient(ConfigurationManager.SmtpClientHost);
+            smtpClient.Credentials = new NetworkCredential(ConfigurationManager.SmtpClientUserName, ConfigurationManager.SmtpClientPassword);
+            smtpClient.Send(mail);
         }
     }
 }
