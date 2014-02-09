@@ -9,7 +9,7 @@
 </div>
 
 @model EPortfolio.Models.MailModel
-@using (Ajax.BeginForm("SendMail", "Tools", new AjaxOptions { OnBegin = "OnBegin", OnSuccess = "OnMailSend", OnFailure = "OnFailure" }))
+@using (Ajax.BeginForm("SendContactMail", "Tools", new AjaxOptions { OnBegin = "OnBegin", OnSuccess = "OnMailSend", OnFailure = "OnFailure" }))
 {
     <div class="modal fade" id="contact">
         <div class="modal-dialog">

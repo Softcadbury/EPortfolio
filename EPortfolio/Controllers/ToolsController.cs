@@ -1,5 +1,5 @@
-﻿using EPortfolio.Models;
-using System.Net;
+﻿using BusinessLogic.Tools;
+using EPortfolio.Models;
 using System.Net.Mail;
 using System.Web.Mvc;
 
@@ -8,17 +8,15 @@ namespace EPortfolio.Controllers
     public class ToolsController : Controller
     {
         [HttpPost]
-        public void SendMail(MailModel model)
+        public void SendContactMail(MailModel model)
         {
             MailMessage mail = new MailMessage();
-            mail.From = new MailAddress("addressFrom");
-            mail.To.Add("addressTo");
+            mail.From = new MailAddress("softox@rparage.fr");
+            mail.To.Add("romain.parage@gmail.com");
             mail.Subject = "Prise de contact : " + model.Email;
             mail.Body = model.Message;
 
-            SmtpClient SmtpServer = new SmtpClient("smtpClinet");
-            SmtpServer.Credentials = new NetworkCredential("address", "mdp");
-            SmtpServer.Send(mail);
+            EmailSender.SendMail(mail);
         }
     }
 }
