@@ -19,6 +19,7 @@ namespace FootballResultsGenerator
                 bin.Serialize(stream, football);
             }
 
+            Console.WriteLine("Generation completed");
             Console.WriteLine("Enter to leave.");
             Console.Read();
         }

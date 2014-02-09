@@ -2,8 +2,9 @@
 {
     public static class ConfigurationManager
     {
-        public static string SmtpClientHost { get { return "host"; } }
-        public static string SmtpClientUserName { get { return "username"; } }
-        public static string SmtpClientPassword { get { return "password"; } }
+        public static string SmtpHost { get { return "host"; } }
+        public static string FtpUri { get { return "host"; } }
+        public static string CredentialsUserName { get { return "username"; } }
+        public static string CredentialsPassword { get { return "password"; } }
     }
 }
