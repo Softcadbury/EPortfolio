@@ -3,7 +3,7 @@ using System.Net.Mail;
 
 namespace BusinessLogic.Tools
 {
-    public static class EmailSender
+    public static class Tools
     {
         public static void SendMail(MailMessage mail)
         {

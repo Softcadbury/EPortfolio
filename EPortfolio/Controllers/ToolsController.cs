@@ -16,7 +16,7 @@ namespace EPortfolio.Controllers
             mail.Subject = "Prise de contact : " + model.Email;
             mail.Body = model.Message;
 
-            EmailSender.SendMail(mail);
+            Tools.SendMail(mail);
         }
     }
 }
