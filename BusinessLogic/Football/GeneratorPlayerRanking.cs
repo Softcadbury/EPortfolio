@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace FootballResultsGenerator
+namespace BusinessLogic
 {
     public static class GeneratorPlayerRanking
     {

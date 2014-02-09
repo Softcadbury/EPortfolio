@@ -177,13 +177,13 @@
     <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
+      <Project>{df88d947-7116-4683-b811-fb7ac6a426c3}</Project>
+      <Name>BusinessLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataModel\DataModel.csproj">
       <Project>{c746fbc7-fd64-4167-815e-dc7502ddf774}</Project>
       <Name>DataModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FootballResultsGenerator\FootballResultsGenerator.csproj">
-      <Project>{aa5eb915-ff38-47b6-9b01-63d5484d29e5}</Project>
-      <Name>FootballResultsGenerator</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace FootballResultsGenerator
+namespace BusinessLogic
 {
     public static class Generator
     {

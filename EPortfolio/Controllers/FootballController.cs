@@ -1,5 +1,5 @@
-﻿using DataModel.Football;
-using FootballResultsGenerator;
+﻿using BusinessLogic;
+using DataModel.Football;
 using System;
 using System.Collections.Generic;
 using System.IO;
