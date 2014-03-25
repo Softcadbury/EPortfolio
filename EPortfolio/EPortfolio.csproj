@@ -123,7 +123,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Controllers\FootballController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ToolsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -153,10 +152,6 @@
   <ItemGroup>
     <None Include="Properties\PublishProfiles\EPortfolio.pubxml" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Views\Football\Index.cshtml" />
-    <Content Include="Views\Football\PlayerRankingTemplate.cshtml" />
-    <Content Include="Views\Football\TeamRankingTemplate.cshtml" />
-    <Content Include="Views\Football\TeamResultTemplate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -175,16 +170,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
-      <Project>{df88d947-7116-4683-b811-fb7ac6a426c3}</Project>
-      <Name>BusinessLogic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataModel\DataModel.csproj">
-      <Project>{c746fbc7-fd64-4167-815e-dc7502ddf774}</Project>
-      <Name>DataModel</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
