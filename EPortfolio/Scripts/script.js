@@ -9,7 +9,7 @@ function init_navigation() {
     var lockNavigation = false;
 
     var routes = $.sammy(function () {
-        this.get(/\#\/(.*)\/(.*)/, function (context) {
+        this.get(/\#\/(.*)\/(.*)/, function () {
             if (lockNavigation)
                 return;
 
@@ -35,7 +35,7 @@ function init_navigation() {
     routes.run('#/accueil/');
 
     $('a[data-toggle=tab]').click(function () {
-        var page = document.location.hash.split('/')[1]
+        var page = document.location.hash.split('/')[1];
         var tab = $(this).attr('href').substring(1);
 
         lockNavigation = true;
@@ -72,16 +72,16 @@ function init_editorColoration() {
 }
 
 // Functions to manage mail sending
-function OnBegin(e) {
+function OnBegin() {
     $('#contact_button').button('loading');
 }
 
-function OnMailSend(e) {
+function OnMailSend() {
     $('#contact_form').hide();
     $('#contact_success').show();
 }
 
-function OnFailure(e) {
+function OnFailure() {
     $('#contact_form').hide();
     $('#contact_failure').show();
 }
