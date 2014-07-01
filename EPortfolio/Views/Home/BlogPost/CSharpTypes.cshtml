@@ -2,31 +2,30 @@
 
 <h3>Memmory</h3>
 <p>
-The memory (RAM) of a computer is didivided in two differents parts, the Stack (Pile) and the Heap (Tas).
-In the .NET Framework, types are distributed beetween this two parts.
+The memory (RAM) of a computer is didivided in two differents parts, the Stack (Pile in french) and the Heap (Tas in french).
+In the .NET Framework, types are distributed between two categories, each distributed in one of these parts of the memory.
 </p>
 
 <h3>Value types</h3>
 <p>
-Ex : Structure, Ennumerations and simply types (bool, int, float, ...).
 Value types are allocated on the Stack.
-Can be destroyed and created quickly.
-Lifetime is determined by the defining scope.
-The equal operator copy the type in a new one.
+Ex : structures, ennumerations and simply types (bool, int, float, ...).
+
+A value type can be destroyed and created quickly. Its lifetime is determined by the defining scope. The equal operator copy the type in a new one.
 </p>
 
 <h3>Reference types</h3>
 <p>
-Ex : Object and string.
-Reference types are allocated on the Heap.    
-The heap is for dynamic allocation, monitored by the .Net garbage collector.
-The equal operator results in a copy of the reference.
+Reference types are allocated on the Heap.  
+Ex : object and strings.
 
-The string type is special. It's an object but it is immutable. It's mean 
+The heap is for dynamic allocation, monitored by the .Net garbage collector. The equal operator results in a copy of the reference.
+
+The string type is special. It's an object but it is immutable. It's mean its value cannot be changed.
 </p>
 
 <h3>Boxing and unboxing</h3>
 <p>
 When the data moves from value types to reference types, it is termed ‘Boxing’ and the reverse is termed ‘UnBoxing’.
-This movement of data creates a performance hit
+This movement of data creates a performance hit.
 </p>
