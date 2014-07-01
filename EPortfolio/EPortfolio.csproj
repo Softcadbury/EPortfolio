@@ -152,6 +152,7 @@
   <ItemGroup>
     <None Include="Properties\PublishProfiles\EPortfolio.pubxml" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Views\Shared\_GoogleAnalytics.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
