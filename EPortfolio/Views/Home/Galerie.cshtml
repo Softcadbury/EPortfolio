@@ -6,6 +6,9 @@
     string oxford = "oxford";
     string new_york = "new_york";
     string singapor = "singapor";
+    string beijing = "beijing";
+    string lanzhou = "lanzhou";
+    string shanghai = "shanghai";
 }
 
 <div id="galerie" class="container-sub display-none">
@@ -20,8 +23,11 @@
         <li>
             <a href="#2011" data-toggle="tab">2011/12</a>
         </li>
-        <li class="active">
+        <li>
             <a href="#2013" data-toggle="tab">2013</a>
+        </li>
+        <li class="active">
+            <a href="#2014" data-toggle="tab">2014</a>
         </li>
     </ul>
     <div class="tab-content tab-content-notop">
@@ -95,7 +101,7 @@
         </div>
 
         <!-- 2013 -->
-        <div class="tab-pane active" id="2013">
+        <div class="tab-pane" id="2013">
             <h3>Singapour (Singapour)</h3>
             <h6>Janvier 2013</h6>
             <div class="row">
@@ -114,6 +120,53 @@
                 @Html.Raw(ButtonHelper.ImageButton(singapor, 15))
                 @Html.Raw(ButtonHelper.ImageButton(singapor, 12))
                 @Html.Raw(ButtonHelper.ImageButton(singapor, 4))
+            </div>
+        </div>
+
+        <!-- 2014 -->
+        <div class="tab-pane active" id="2014">
+            <h3>Beijing (Chine)</h3>
+            <h6>Juin 2014</h6>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(beijing, 2))
+                @Html.Raw(ButtonHelper.ImageButton(beijing, 3))
+                @Html.Raw(ButtonHelper.ImageButton(beijing, 4))
+                @Html.Raw(ButtonHelper.ImageButton(beijing, 5))
+                @Html.Raw(ButtonHelper.ImageButton(beijing, 6))
+                @Html.Raw(ButtonHelper.ImageButton(beijing, 7))
+                @Html.Raw(ButtonHelper.ImageButton(beijing, 8))
+                @Html.Raw(ButtonHelper.ImageButton(beijing, 1))
+                @Html.Raw(ButtonHelper.ImageButton(beijing, 9))
+            </div>
+            <br />
+
+            <h3>Lanzhou (Chine)</h3>
+            <h6>Juin 2014</h6>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(lanzhou, 1))
+                @Html.Raw(ButtonHelper.ImageButton(lanzhou, 5))
+                @Html.Raw(ButtonHelper.ImageButton(lanzhou, 6))
+                @Html.Raw(ButtonHelper.ImageButton(lanzhou, 2))
+                @Html.Raw(ButtonHelper.ImageButton(lanzhou, 3))
+                @Html.Raw(ButtonHelper.ImageButton(lanzhou, 4))
+            </div>
+            <br />
+
+            <h3>Shanghai (Chine)</h3>
+            <h6>Juin 2014</h6>
+            <div class="row">
+                @Html.Raw(ButtonHelper.ImageButton(shanghai, 1))
+                @Html.Raw(ButtonHelper.ImageButton(shanghai, 5))
+                @Html.Raw(ButtonHelper.ImageButton(shanghai, 6))
+                @Html.Raw(ButtonHelper.ImageButton(shanghai, 8))
+                @Html.Raw(ButtonHelper.ImageButton(shanghai, 2))
+                @Html.Raw(ButtonHelper.ImageButton(shanghai, 3))
+                @Html.Raw(ButtonHelper.ImageButton(shanghai, 4))
+                @Html.Raw(ButtonHelper.ImageButton(shanghai, 7))
+                @Html.Raw(ButtonHelper.ImageButton(shanghai, 9))
+                @Html.Raw(ButtonHelper.ImageButton(shanghai, 10))
+                @Html.Raw(ButtonHelper.ImageButton(shanghai, 11))
+                @Html.Raw(ButtonHelper.ImageButton(shanghai, 12))
             </div>
         </div>
     </div>
