@@ -1,10 +1,9 @@
-﻿using System.Net.Mail;
-using System.Web.Mvc;
-using EPortfolio.Models;
-
-namespace EPortfolio.Controllers
+﻿namespace EPortfolio.Controllers
 {
     using System.Net;
+    using System.Net.Mail;
+    using System.Web.Mvc;
+    using EPortfolio.Models;
 
     public class ToolsController : Controller
     {

@@ -1,7 +1,7 @@
-﻿using System.Web.Optimization;
-
-namespace EPortfolio.App_Start
+﻿namespace EPortfolio
 {
+    using System.Web.Optimization;
+
     public class BundleConfig
     {
         public static void RegisterBundles(BundleCollection bundles)

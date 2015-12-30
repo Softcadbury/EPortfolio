@@ -1,7 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace EPortfolio.Models
+﻿namespace EPortfolio.Models
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class MailModel
     {
         [Required(ErrorMessage = "Le champ {0} est requis.")]

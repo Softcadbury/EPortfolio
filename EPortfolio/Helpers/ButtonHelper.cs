@@ -1,8 +1,8 @@
-﻿using System;
-using System.Web;
-
-namespace EPortfolio.Helpers
+﻿namespace EPortfolio.Helpers
 {
+    using System;
+    using System.Web;
+
     public static class ButtonHelper
     {
         public static string FancyboxButton(string link)
