@@ -329,10 +329,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Accueil.cshtml" />
-    <Content Include="Views\Home\Blog.cshtml" />
-    <Content Include="Views\Home\BlogPost\CSharpDelegates.cshtml" />
-    <Content Include="Views\Home\BlogPost\CSharpParameters.cshtml" />
-    <Content Include="Views\Home\BlogPost\CSharpTypes.cshtml" />
     <Content Include="Views\Home\Galerie.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Presentation.cshtml" />
