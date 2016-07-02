@@ -39,18 +39,6 @@ h6 {
     padding-bottom: 0;
 }
 
-.modal-dialog {
-    margin-top: 80px;
-}
-
-.field-validation-error {
-    color: red;
-}
-
-.alert {
-    margin: 0;
-}
-
 .display-none {
     display: none;
 }
@@ -68,12 +56,6 @@ h6 {
         font-size: 30px;
         margin-left: 15%;
         margin-right: 15%;
-    }
-
-    #accueil a {
-        font-size: 21px;
-        margin-top: 20px;
-        padding: 11px 24px;
     }
 
 /* Présentation */

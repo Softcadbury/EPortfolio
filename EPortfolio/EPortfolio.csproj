@@ -124,18 +124,15 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ToolsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ButtonHelper.cs" />
-    <Compile Include="Models\MailModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\Images\cream_dust.png" />
     <Content Include="Content\Images\favicon.ico" />
     <Content Include="Content\Images\fb-icon.png" />
@@ -306,7 +303,6 @@
     <Content Include="Content\Images\preview\test.png" />
     <Content Include="Content\site.css" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -319,7 +315,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\EPortfolio.pubxml" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Views\Shared\_GoogleAnalytics.cshtml" />
     <None Include="Properties\PublishProfiles\rparage - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\rparage - Web Deploy.pubxml" />
