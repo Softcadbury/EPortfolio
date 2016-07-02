@@ -135,8 +135,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Content Include="Content\Images\cream_dust.png" />
     <Content Include="Content\Images\favicon.ico" />
-    <Content Include="Content\Images\fb-icon.png" />
-    <Content Include="Content\Images\g-icon.png" />
     <Content Include="Content\Images\galerie\beijing\1.jpg" />
     <Content Include="Content\Images\galerie\beijing\1x.jpg" />
     <Content Include="Content\Images\galerie\beijing\2.jpg" />
