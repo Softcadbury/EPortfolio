@@ -125,6 +125,22 @@
             <a href='http://www.redips.net/javascript/redips-drag-documentation/' target='_blank'>Redips</a>.
             <br /><br />" + ButtonHelper.TryFreeButton("chess") + ButtonHelper.GithubButton("Chess") + @"
         </p>";
+
+    string reaDashboardFootball = @"
+        <h3>Dashboard Football (Node JS)</h3>
+        <h6>2016 - 1 personne</h6>
+        <p>
+	        Réalisation d'une application permettant de consulter rapidement les résultats des plus grands championnats de football.
+	        <br /><br />" + ButtonHelper.TryButton("http://dashboardfootball.com/") + ButtonHelper.GithubButton("DashboardFootball") + @"
+        </p>";
+
+    string reaHelloTalent = @"
+        <h3>Hello Talent (C#, KnockoutJS)</h3>
+        <h6>Depuis 2014 - Plusieurs personnes</h6>
+        <p>
+	        Réalisation d'une application permettant de faciliter les recrutements.
+	        <br /><br />" + ButtonHelper.TryButton("http://www.hellotalent.com/") + @"
+        </p>";
 }
 
 <div id="realisations" class="container-sub display-none">
@@ -145,6 +161,7 @@
         <div class="tab-pane active" id="personnels">
             <div class="row">
                 <div class="col-md-6">
+                    <div class="realisation">@Html.Raw(reaDashboardFootball)</div>
                     <div class="realisation">@Html.Raw(reaNote)</div>
                 </div>
                 <div class="col-md-6">
@@ -156,6 +173,7 @@
         <div class="tab-pane" id="professionnels">
             <div class="row">
                 <div class="col-md-6">
+                    <div class="realisation">@Html.Raw(reaHelloTalent)</div>
                     <div class="realisation">@Html.Raw(reaLog)</div>
                 </div>
                 <div class="col-md-6">
