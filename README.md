@@ -1,4 +1,4 @@
-#EPortfolio - <a href="http://rparage.com/">Try it !</a>
+#EPortfolio
 
 ## Description
 
